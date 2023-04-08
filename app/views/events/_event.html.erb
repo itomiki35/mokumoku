@@ -18,6 +18,11 @@
           <i class="bi bi-calendar"></i>
           <%= l event.held_at, format: :short %>
         </div>
+        <div>
+        <% if event.only_woman == true %>
+          <p>女性限定</p>
+        <% end %>
+        </div>
       </div>
       <hr />
       <div class="d-flex align-items-center justify-content-between">
