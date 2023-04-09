@@ -96,7 +96,7 @@
                               data: { confirm: 'キャンセルします' }
                   %>
                 <% else %>
-                  <% unless @event.only_woman == true && current_user&.gender == 'man' || current_user&.gender == 'other' %>
+                  <% unless @event.only_woman? && (current_user&.gender == 'man' || current_user&.gender == 'other') %>
                   <%= link_to 'このもくもく会に参加する',
                               event_attendance_url(@event),
                               class: 'btn btn-primary',
